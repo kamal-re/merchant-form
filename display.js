@@ -58,8 +58,8 @@ function checkboxbutton() {
   }
   return val;
 }
+var formData = {};
 function readFormData() {
-  var formData = {};
   formData["name"] = document.getElementById("name").value;
   formData["email"] = document.getElementById("email").value;
   formData["phone"] = document.getElementById("phone").value;
@@ -175,8 +175,7 @@ function onDelete(td) {
 }
 
 function store() {
-  var name = document.getElementById("name");
-  localStorage.setItem("name", name.value);
-  var name1 = localStorage.getItem("name");
-  alert(name1);
+  localStorage.setItem("formData", JSON.stringify(formData));
+  var user = JSON.parse(localStorage.getItem("formData"));
+  console.log(user);
 }
