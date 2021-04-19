@@ -1,0 +1,30 @@
+body {
+  background-color: lavender;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+header {
+  font-weight: bolder;
+  font-size: x-large;
+}
+button {
+  color: darkblue;
+}
+table,
+tr,
+th,
+tbody,
+td {
+  border-collapse: collapse;
+  border-collapse: separate;
+  border: 1px solid black;
+  width: 50px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+option {
+  font-weight: bolder;
+}
