@@ -23,7 +23,7 @@
       <br />
       <strong>Email</strong>
       <input
-        type="text"
+        type="email"
         id="email"
         name="email"
         placeholder="Your Email"
@@ -37,7 +37,7 @@
         id="phone"
         name="phone"
         placeholder="Your Phone no"
-        max="10"
+        maxlength="10"
         required
       />
       <br />
@@ -52,7 +52,8 @@
       />
       <br />
       <br>
-      <strong>Contact Name</strong>
+      <strong>Contact 
+              Name</strong>
       <input
         type="text"
         id="contactname"
@@ -62,18 +63,20 @@
       />
       <br>
       <br>
-      <strong>Contact Phone<strong>
+      <strong>Contact 
+              Phone<strong>
       <input
         type="text"
         id="contactphone"
         name="contactphone"
         placeholder="Your contactphone"
-        max="10"
+        maxlength="10"
         required
       />
      <br>
      <br>
-      <strong>Contact Email<strong>
+      <strong>Contact 
+              Email<strong>
       <input
         type="text"
         id="contactemail"
@@ -114,10 +117,11 @@
       <br>
       <strong>Commission Percentage</strong>
       <input
-        type="number"
+        type="text"
         id="commissionpercentage"
         name="commissionpercentage"
         placeholder="Your CommissionPercentage"
+        maxlength="3"
         required
       />
       <br>
@@ -174,7 +178,7 @@
       />
       <strong>Card payment</strong><br />
       <br>
-      <button onclick="onFormSubmit();">Submit</button><br />
+      <button onclick="onFormSubmit();store()">Submit</button><br />
     </div>
     </form>
     </div>

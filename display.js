@@ -4,6 +4,7 @@ function onFormSubmit() {
   if (selectedRow == null) insertNewRecord(formData);
   else updateRecord(formData);
   resetForm();
+  console.log(formData);
 }
 function imageFile(event) {
   const image = event.target.files[0];
@@ -120,21 +121,7 @@ function insertNewRecord(data) {
 }
 
 function resetForm() {
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("website").value = "";
-  document.getElementById("contactname").value = "";
-  document.getElementById("contactphone").value = "";
-  document.getElementById("contactemail").value = "";
-  document.getElementById("notes").value = "";
-  document.getElementsByName("type").value = "";
-  document.getElementsByName("category").value = "";
-  document.getElementById("commissionpercentage").value = "";
-  document.getElementById("activefrom").value = "";
-  document.getElementById("logo").value = "";
-  document.getElementsByName("criticalaccount").value = "";
-  document.getElementsByName("paymentoptions").value = "";
+  document.getElementById("merchant").reset();
   selectedRow = null;
 }
 
@@ -185,4 +172,11 @@ function onDelete(td) {
     document.getElementById("merchantform").deleteRow(row.rowIndex);
     resetForm();
   }
+}
+
+function store() {
+  var name = document.getElementById("name");
+  localStorage.setItem("name", name.value);
+  var name1 = localStorage.getItem("name");
+  alert(name1);
 }
